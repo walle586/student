@@ -1,17 +1,15 @@
 spring:
   datasource:
-    url: jdbc:sqlserver://127.0.0.1;databaseName=school
-    username: sa
+    url: jdbc:mysql://127.0.0.1/school?useSSL=false&characterEncoding=UTF-8&serverTimezone=UTC&allowPublicKeyRetrieval=true
+    username: root
     password: 235610
-    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
-#    url: jdbc:mysql://127.0.0.1/school?useSSL=false&characterEncoding=UTF-8&serverTimezone=UTC&allowPublicKeyRetrieval=true
-#    driver-class-name: com.mysql.cj.jdbc.Driver
+    driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
     hibernate:
       ddl-auto: update
     show-sql: true
-    database: sql_server
-    database-platform: org.hibernate.dialect.SQLServer2008Dialect
+    database: mysql
+    database-platform: org.hibernate.dialect.MySQL8Dialect
 server:
   port: 8081
   servlet:
